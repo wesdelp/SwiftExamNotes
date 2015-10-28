@@ -262,4 +262,38 @@ var rect = CGRect(origin: origin, size: size)
 // Custom views can be created using UIKit objects such as buttons, labels, etc.
 // UIKit objects can draw their own content on the screen
 
+// View controllers are used to manage screens, inherit from UIViewController. Usually one per screen
+// View property is a reference to the top-level view the controller manages (UIView)
+// ParentViewController property references the container controller if it exists or nil
+// Storyboard is a reference to the storyboard the view controller was loaded from
+
+// UITabBarController is a view controller which manages views. Root view is associated with each tab.
+// When a tab is selected, the root view assigned to that tab is rendered
+// UINavigationController is set as initial view, automatically generates back nav bar with back button
+// Modal segues push to a new view based on an action, offer no way to get back
+// Unwind segues return the previous view on an action
+
+// A Storyboard is comprised of a number of scenes, each scene represents a view controller and it's views
+// Scenes are connected by segue objects which allow transitions between these scenes
+// The initial view controller is the starting scene which has no sources from it's 'left'
+// This is denoted by the arrow in Storyboard view or 'Is Initial View Controller'
+
+// UITableView is managed by UITableViewController which requires a delegate and a data source
+// Data source requires two methods: cellForRowAtIndexPath and numberOfRowsInSection
+// Table View Delegate manages selections, reordering, deletions, headers, footers, etc.
+// Static tables hold predefined data while Dynamic tables allow for dynamic data of any number of entries
+
+// UIResponder provides an interface for objects that respond to and handle events
+// UIResponders have nextResponder, a sequence of objects making up the responder chain
+// The first object in this responder chain is known as the 'first responder'
+// Top-most view is window, if window's nextResponder does not handle a passed up event, it is discarded
+
+// Views may respond to touch events. Some examples are touchsBegan, touchsMoved, touchsEnded, touchesCancelled
+// When a finger touches the screen, a UITouch object is created and sent in message to UIView
+// Touch objects are destroyed after touchesEnded method finishes executing
+
+// Controls: UI controls all inherit from UIView. Labels, buttons, sliders, switches, steppers, etc.
+// Most do not have an outlet to reference the control, labels are an exception
+// Usually controls are provided with an action to define what to do upon interaction
+
 
